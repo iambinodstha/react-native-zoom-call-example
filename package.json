@@ -2,6 +2,10 @@
   "name": "zoomCallApp",
   "version": "0.0.1",
   "private": true,
+  "author": {
+    "name": "Binod Shrestha",
+    "email": "iambinodstha@gmail.com"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
