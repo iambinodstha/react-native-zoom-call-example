@@ -10,7 +10,7 @@
 ## Build an zoom app
 ### Steps:
 
-1. create a zoom app [Zoom Marketplace](https://marketplace.zoom.us/){:target="_blank"}
+1. create a zoom app [Zoom Marketplace](https://marketplace.zoom.us/)
 2. Generate app credentials for sdk and api
 
 ## How to install
@@ -98,6 +98,6 @@ async function startMeeting() {
 </pre>
 
 ## Packages used
-1. [react-native-zoom-us](https://github.com/mieszko4/react-native-zoom-us){:target="_blank"}
-2. [react-native-switch](https://github.com/shahen94/react-native-switch#readme){:target="_blank"}
-3. [react-native-pure-jwt](https://github.com/zaguiini/react-native-pure-jwt#readme){:target="_blank"}
+1. [react-native-zoom-us](https://github.com/mieszko4/react-native-zoom-us)
+2. [react-native-switch](https://github.com/shahen94/react-native-switch#readme)
+3. [react-native-pure-jwt](https://github.com/zaguiini/react-native-pure-jwt#readme)
