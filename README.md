@@ -24,7 +24,25 @@
 `npm install` or `yarn install`
 
 ## Android installation
-`npx react-native run-android` or `react-native run-android`
+1. Add repository to android/build.gradle:
+```gradle
+allprojects {
+    repositories {
+        flatDir {
+            dirs "$rootDir/../node_modules/react-native-zoom-us/android/libs"
+        }
+    }
+}   
+```
+2. Set minSdkVersion to 21
+```gradle
+buildscript {
+    ext {
+        minSdkVersion = 21
+    }
+}
+```
+3. `npx react-native run-android` or `react-native run-android`
 
 ## IOS installation
 1. pod install `cd ios && pod install`
@@ -33,17 +51,18 @@
 ## Usage
 1. setup configuration credentials:
 `source/helper/config.js`
-<pre>
+```javascript
 export const config = {
     apiKey: '', //API key
     apiSecret: '', //API secret
     sdkKey: '', //SDK key
     sdkSecret: '' //SDK secret
 }
+```
 </pre>
 
 2. Initialization
-<pre>
+```javascript
    async function initializeZoom() {
         try {
             await ZoomUs.initialize({
@@ -55,10 +74,10 @@ export const config = {
             Alert.alert('Error', err);
         }
     }
-   </pre>
+```
 
 3. Join Meeting
-<pre>
+```javascript
 async function joinMeeting() {
         try {
             await ZoomUs.joinMeeting({
@@ -71,10 +90,10 @@ async function joinMeeting() {
             Alert.alert('Error', err);
         }
     }
-</pre>
+```
 
 4. Join Meeting
-<pre>
+```javascript
 async function startMeeting() {
         try {
             setLoading(true);
@@ -95,7 +114,7 @@ async function startMeeting() {
             Alert.alert('Error', err)
         }
     }
-</pre>
+```
 
 ## Packages used
 1. [react-native-zoom-us](https://github.com/mieszko4/react-native-zoom-us)
